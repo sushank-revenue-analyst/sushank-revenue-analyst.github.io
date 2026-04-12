@@ -450,9 +450,11 @@
   .exp-points li {
     font-size: 14px;
     color: var(--ink-muted);
-    padding: 4px 0;
-    display: flex; gap: 10px;
-    line-height: 1.55;
+    padding: 5px 0;
+    display: block;
+    line-height: 1.65;
+    padding-left: 16px;
+    text-indent: -16px;
   }
   .exp-points li::before {
     content: '—';
@@ -604,7 +606,7 @@
     <a href="#about">About</a>
     <a href="#project">Project</a>
     <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
+    <a href="#achievements">Experience</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -631,7 +633,7 @@
       <span class="badge">FMVA Certified</span>
     </div>
     <div class="hero-cta">
-      <a href="/cdn-cgi/l/email-protection#90e3e5e3f8f1fefbbef1f7e2f1e7f1fca6a9d0f7fdf1f9fcbef3fffd" class="btn-primary">✉ Get in Touch</a>
+      <a href="#s-contact" class="btn-primary">✉ Get in Touch</a>
       <a href="https://linkedin.com/in/sushankagrawal" target="_blank" class="btn-ghost">→ LinkedIn</a>
       <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="btn-ghost">→ GitHub</a>
     </div>
@@ -838,81 +840,7 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<div class="full-divider"></div>
-<section id="experience" style="max-width: 860px;">
-  <p class="section-eyebrow">Career Timeline</p>
-  <h2 class="section-title">Professional Experience</h2>
-  <p class="section-lead">Progressive roles across global organisations, consistently delivering measurable impact at scale.</p>
 
-  <div class="timeline">
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Revenue Analyst</div>
-        <span class="exp-period">Jul 2024 — Present</span>
-      </div>
-      <div class="exp-company">WebMD — Global Digital Health Platform · Mumbai, India</div>
-      <ul class="exp-points">
-        <li>Own end-to-end US GAAP & SOX-compliant revenue recognition across all public segments for a 175M+ user platform; enforce ASC 606 standards across multiple revenue streams.</li>
-        <li>Deliver week-over-week variance analysis and executive dashboards to C-suite; identify revenue leakage risks and surface actionable insights.</li>
-        <li>Drive month/quarter-end close cycles — author accruals, journal entries, reconciliation reports; maintain SOX-compliant audit binders.</li>
-      </ul>
-      <div class="exp-highlight">
-        <span class="exp-tag">ASC 606</span><span class="exp-tag">SOX</span><span class="exp-tag">Salesforce</span><span class="exp-tag">MS Dynamics GP</span><span class="exp-tag">Variance Analysis</span>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Accounts Payable Associate</div>
-        <span class="exp-period">Jan 2024 — Apr 2024</span>
-      </div>
-      <div class="exp-company">Data Axle — B2B Data & Marketing Intelligence · Pune, India</div>
-      <ul class="exp-points">
-        <li>Processed high-volume vendor invoices in NextMark — GL coding, three-way matching, payment execution; boosted data integrity by 20%.</li>
-        <li>Resolved vendor payment discrepancies; improved payment accuracy 15% and reduced overdue accounts by 25%.</li>
-        <li>Contributed to a 10% increase in collections through billing & cash flow analysis; distributed weekly cash requirement reports.</li>
-      </ul>
-      <div class="exp-highlight">
-        <span class="exp-tag">Three-Way Matching</span><span class="exp-tag">P2P</span><span class="exp-tag">NextMark</span><span class="exp-tag">Advanced Excel</span>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Billing Analyst</div>
-        <span class="exp-period">Nov 2022 — Dec 2023</span>
-      </div>
-      <div class="exp-company">FIS — Global Financial Technology · Pune, India</div>
-      <ul class="exp-points">
-        <li>Generated 500+ client invoices/month in SAP, exceeding productivity benchmarks by 65% with 98%+ on-time accuracy.</li>
-        <li>Reduced billing errors by 15% and improved client satisfaction by 12% through data validation and trend analysis.</li>
-        <li>Managed customer contracts including pricing adjustments, CPI updates, and service terminations; supported UAT for SAP billing module upgrades.</li>
-      </ul>
-      <div class="exp-highlight">
-        <span class="exp-tag">SAP FICO</span><span class="exp-tag">Planview</span><span class="exp-tag">ServiceNow</span><span class="exp-tag">Credit Memos</span>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Billing Analyst</div>
-        <span class="exp-period">Jul 2021 — Aug 2022</span>
-      </div>
-      <div class="exp-company">Dassault Systèmes — Enterprise SaaS & 3D Software · Pune, India</div>
-      <ul class="exp-points">
-        <li>Generated 300+ daily invoices in Oracle PeopleSoft, exceeding TAT targets by 200%; managed SAP Ariba & Coupa portal billing.</li>
-        <li>Performed monthly AR/GL reconciliations, deferred account reviews, and IFRS 15-compliant revenue forecasting via Excel Macros.</li>
-        <li>Resolved billing discrepancies and PO issues; collaborated with IT on billing system enhancements to reduce manual intervention.</li>
-      </ul>
-      <div class="exp-highlight">
-        <span class="exp-tag">Oracle PeopleSoft</span><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">IFRS 15</span>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- CERTIFICATIONS & EDUCATION -->
 <div class="full-divider"></div>
@@ -1050,10 +978,10 @@
       <div>
         <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
         <ul class="exp-points">
-          <li>Improved payment accuracy by <strong>15%</strong> through proactive account reviews and systematic discrepancy resolution.</li>
-          <li>Reduced overdue accounts by <strong>25%</strong> through disciplined follow-up and early escalation protocols.</li>
-          <li>Contributed to a <strong>10% increase in collections</strong> through targeted cash flow analysis and billing trend identification.</li>
-          <li>Boosted ERP data integrity and reporting efficiency by <strong>20%</strong> via structured audit processes.</li>
+          <li>Improved payment accuracy by 15% through proactive account reviews and systematic discrepancy resolution.</li>
+          <li>Reduced overdue accounts by 25% through disciplined follow-up and early escalation protocols.</li>
+          <li>Contributed to a 10% increase in collections through targeted cash flow analysis and billing trend identification.</li>
+          <li>Boosted ERP data integrity and reporting efficiency by 20% via structured audit processes.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
           <span class="exp-tag">Three-Way Matching</span><span class="exp-tag">P2P</span><span class="exp-tag">NextMark ERP</span><span class="exp-tag">GL Coding</span><span class="exp-tag">Advanced Excel</span><span class="exp-tag">VBA/Macros</span><span class="exp-tag">1099 Reporting</span>
@@ -1087,9 +1015,9 @@
       <div>
         <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
         <ul class="exp-points">
-          <li>Exceeded billing productivity benchmarks by <strong>65%+</strong> — consistently generating 500+ invoices/month with 98%+ on-time accuracy.</li>
-          <li>Reduced billing errors by <strong>15%</strong> through rigorous data validation and trend analysis on historical billing data.</li>
-          <li>Improved client satisfaction scores by <strong>12%</strong> through faster dispute resolution and proactive communication.</li>
+          <li>Exceeded billing productivity benchmarks by 65%+ — consistently generating 500+ invoices/month with 98%+ on-time accuracy.</li>
+          <li>Reduced billing errors by 15% through rigorous data validation and trend analysis on historical billing data.</li>
+          <li>Improved client satisfaction scores by 12% through faster dispute resolution and proactive communication.</li>
           <li>Successfully supported SAP billing module UAT ensuring zero disruption during critical system upgrade periods.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
@@ -1124,7 +1052,7 @@
       <div>
         <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
         <ul class="exp-points">
-          <li>Exceeded TAT targets by <strong>200%</strong> — processing 300+ daily invoices in Oracle PeopleSoft with consistently high accuracy.</li>
+          <li>Exceeded TAT targets by 200% — processing 300+ daily invoices in Oracle PeopleSoft with consistently high accuracy.</li>
           <li>Ensured IFRS 15-compliant AR/GL reconciliations with zero audit findings across all reviewed periods.</li>
           <li>Streamlined Ariba and Coupa portal billing processes reducing manual errors and improving submission turnaround time.</li>
           <li>Collaborated with IT to implement billing system enhancements that measurably reduced manual workload for the team.</li>
@@ -1158,8 +1086,8 @@
       <div>
         <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
         <ul class="exp-points">
-          <li>Improved forecast accuracy by <strong>15%</strong> through Excel-based financial modelling and ratio analysis.</li>
-          <li>Improved resource allocation efficiency by <strong>10%</strong> by identifying cost optimisation opportunities through peer benchmarking.</li>
+          <li>Improved forecast accuracy by 15% through Excel-based financial modelling and ratio analysis.</li>
+          <li>Improved resource allocation efficiency by 10% by identifying cost optimisation opportunities through peer benchmarking.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
           <span class="exp-tag">Financial Modelling</span><span class="exp-tag">Ratio Analysis</span><span class="exp-tag">Budgeting</span><span class="exp-tag">Advanced Excel</span><span class="exp-tag">Peer Benchmarking</span>
@@ -1179,13 +1107,13 @@
     <p class="contact-sub">Revenue Analyst · IFRS 15 · US GAAP · SOX<br>Pune, India · Relocating Internationally</p>
   </div>
   <div class="contact-links">
-    <a href="mailto:sushank.agrawal69@gmail.com" class="contact-link">
+    <div class="contact-link" onclick="window.location.href='mai'+'lto:sushank.agrawal69'+'@gmail.com';" style="cursor:pointer;">
       <div class="contact-link-icon">✉</div>
       <div class="contact-link-text">
         <span class="contact-link-label">Email</span>
-        <span class="contact-link-value">sushank.agrawal69@gmail.com</span>
+        <span class="contact-link-value"><span class="__cf_email__" data-cfemail="2c5f595f444d4247024d4b5e4d5b4d401a156c4b414d4540024f4341">[email&#160;protected]</span></span>
       </div>
-    </a>
+    </div>
     <a href="https://linkedin.com/in/sushankagrawal" target="_blank" class="contact-link">
       <div class="contact-link-icon">in</div>
       <div class="contact-link-text">
@@ -1209,6 +1137,4 @@
   <p>Pune, India · Open to Global Relocation</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const bars = document.querySelectorAll('.bar-fill[data-w]');
-  const
+<script data-cfasync="false" src="/c
