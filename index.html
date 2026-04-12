@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushank Agrawal — Revenue & Financial Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f1117;
+    --ink-muted: #4a5568;
+    --ink-faint: #8a94a6;
+    --paper: #fafaf8;
+    --surface: #ffffff;
+    --accent: #1a3c6e;
+    --accent-light: #2d5fa0;
+    --gold: #b8972a;
+    --gold-light: #e8c84a;
+    --emerald: #0f7a5a;
+    --red: #c0392b;
+    --border: #e8e6e0;
+    --border-strong: #c8c4bc;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --radius: 3px;
+    --radius-lg: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-muted);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 56px;
+  }
+  .hero-left {
+    background: var(--accent);
+    padding: 80px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border: 60px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; bottom: 40px; left: -40px;
+    width: 180px; height: 180px;
+    border: 40px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+    width: fit-content;
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 5vw, 64px);
+    color: #ffffff;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .hero-name em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .hero-subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 380px;
+  }
+  .hero-badges {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 44px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.9);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.15);
+    letter-spacing: 0.03em;
+  }
+  .hero-cta {
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: #a07c1e; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+    transition: background 0.2s, border-color 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+  .hero-right {
+    background: var(--surface);
+    padding: 80px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .kpi-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--border); border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .kpi-cell {
+    background: var(--surface);
+    padding: 28px 24px;
+    transition: background 0.2s;
+  }
+  .kpi-cell:hover { background: #f8f7f5; }
+  .kpi-num {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .kpi-num.green { color: var(--emerald); }
+  .kpi-num.gold { color: var(--gold); }
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .hero-companies {
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+  }
+  .companies-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 16px;
+  }
+  .company-list {
+    display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
+  }
+  .company-chip {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    padding: 6px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 96px 40px; max-width: 1200px; margin: 0 auto; }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .section-lead {
+    font-size: 16px;
+    color: var(--ink-muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+  }
+
+  /* ── FEATURED PROJECT ── */
+  #project { background: var(--ink); color: #fff; max-width: none; padding: 96px 0; }
+  .project-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .project-inner .section-eyebrow { color: var(--gold-light); }
+  .project-inner .section-title { color: #fff; }
+  .project-inner .section-lead { color: rgba(255,255,255,0.65); }
+
+  .project-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .project-chart {
+    background: rgba(255,255,255,0.04);
+    padding: 32px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .project-chart:last-child { border-right: none; }
+  .chart-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 20px;
+  }
+  .bar-group { margin-bottom: 14px; }
+  .bar-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    display: flex; justify-content: space-between;
+  }
+  .bar-track {
+    height: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .bar-fill.blue { background: #4a90d9; }
+  .bar-fill.green { background: #3dc98a; }
+  .bar-fill.gold { background: var(--gold-light); }
+  .bar-fill.red { background: #e05c5c; }
+
+  .kpi-mini-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .kpi-mini {
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: var(--radius);
+  }
+  .kpi-mini-num {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .kpi-mini-num.g { color: #3dc98a; }
+  .kpi-mini-num.a { color: var(--gold-light); }
+  .kpi-mini-num.r { color: #e05c5c; }
+  .kpi-mini-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .project-features {
+    margin-top: 48px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .feature-item {
+    padding: 28px 24px;
+    background: rgba(255,255,255,0.02);
+  }
+  .feature-icon {
+    width: 36px; height: 36px;
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .feature-icon.blue { background: rgba(74,144,217,0.15); }
+  .feature-icon.green { background: rgba(61,201,138,0.15); }
+  .feature-icon.gold { background: rgba(232,200,74,0.15); }
+  .feature-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .feature-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+  .skill-category {
+    background: var(--surface);
+    padding: 32px 28px;
+  }
+  .skill-cat-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .skill-list { list-style: none; }
+  .skill-list li {
+    font-size: 13px;
+    color: var(--ink-muted);
+    padding: 5px 0;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .skill-list li::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── EXPERIENCE ── */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border-strong);
+  }
+  .exp-item {
+    padding-left: 40px;
+    padding-bottom: 48px;
+    position: relative;
+  }
+  .exp-item::before {
+    content: '';
+    position: absolute; left: -5px; top: 6px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--accent);
+  }
+  .exp-item:first-child::before { background: var(--accent); }
+  .exp-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 8px;
+    margin-bottom: 4px;
+  }
+  .exp-role {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .exp-period {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 4px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .exp-company {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin-bottom: 14px;
+  }
+  .exp-points { list-style: none; }
+  .exp-points li {
+    font-size: 14px;
+    color: var(--ink-muted);
+    padding: 4px 0;
+    display: flex; gap: 10px;
+    line-height: 1.55;
+  }
+  .exp-points li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  .exp-highlight {
+    display: inline-flex; gap: 8px; flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .exp-tag {
+    font-size: 11px;
+    font-weight: 500;
+    background: #eef3fa;
+    color: var(--accent);
+    padding: 3px 9px;
+    border-radius: 2px;
+  }
+
+  /* ── GLOBAL STRATEGY ── */
+  .strategy-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    background: var(--border); border: 1px solid var(--border);
+  }
+  .strategy-card {
+    background: var(--surface);
+    padding: 36px 32px;
+  }
+  .strategy-num {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--border-strong);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .strategy-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .strategy-body {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+  .strategy-body strong { color: var(--accent); font-weight: 600; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--accent); max-width: none; padding: 80px 0; }
+  .contact-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;
+  }
+  .contact-text .section-eyebrow { color: var(--gold-light); }
+  .contact-title {
+    font-family: var(--font-display);
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .contact-sub { color: rgba(255,255,255,0.6); font-size: 15px; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-link {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    transition: background 0.2s;
+    min-width: 280px;
+  }
+  .contact-link:hover { background: rgba(255,255,255,0.15); }
+  .contact-link-icon {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .contact-link-text { color: #fff; }
+  .contact-link-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .contact-link-value { font-size: 14px; font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a0e17;
+    padding: 24px 40px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+  /* ── DIVIDER ── */
+  .full-divider { height: 1px; background: var(--border); max-width: none; margin: 0; padding: 0; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-left > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-left > *:nth-child(5) { animation-delay: 0.5s; }
+
+  .hero-right > * {
+    animation: fadeUp 0.7s ease both;
+    animation-delay: 0.4s;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left, .hero-right { padding: 64px 24px; }
+    section { padding: 64px 20px; }
+    .skills-grid, .project-features { grid-template-columns: 1fr; }
+    .project-grid { grid-template-columns: 1fr; }
+    .strategy-grid { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { flex-direction: column; }
+    footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">Sushank Agrawal</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about" style="padding: 0; max-width: none; margin: 0;">
+  <div class="hero-left">
+    <span class="hero-tag">Open to Global Opportunities</span>
+    <h1 class="hero-name">
+      Revenue &<br><em>Financial</em><br>Analyst
+    </h1>
+    <p class="hero-subtitle">
+      4+ years driving full-cycle revenue operations — IFRS 15, US GAAP, SOX — at global healthcare, fintech, and enterprise SaaS firms. I also build the tools that automate the work.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">IFRS 15</span>
+      <span class="badge">US GAAP · ASC 606</span>
+      <span class="badge">SOX Compliance</span>
+      <span class="badge">SAP FICO</span>
+      <span class="badge">Oracle PeopleSoft</span>
+      <span class="badge">Python Analytics</span>
+      <span class="badge">Power BI</span>
+      <span class="badge">MBA Finance</span>
+      <span class="badge">FMVA Certified</span>
+    </div>
+    <div class="hero-cta">
+      <a href="/cdn-cgi/l/email-protection#90e3e5e3f8f1fefbbef1f7e2f1e7f1fca6a9d0f7fdf1f9fcbef3fffd" class="btn-primary">✉ Get in Touch</a>
+      <a href="https://linkedin.com/in/sushankagrawal" target="_blank" class="btn-ghost">→ LinkedIn</a>
+      <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="btn-ghost">→ GitHub</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="kpi-grid">
+      <div class="kpi-cell">
+        <div class="kpi-num">$1.14M</div>
+        <div class="kpi-label">AR Tracked & Managed</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num green">88.6%</div>
+        <div class="kpi-label">Collection Rate</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num gold">500+</div>
+        <div class="kpi-label">Invoices / Month at FIS</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num">27 days</div>
+        <div class="kpi-label">DSO Optimised</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num green">98%+</div>
+        <div class="kpi-label">Billing Accuracy</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-num">4+ yrs</div>
+        <div class="kpi-label">Experience</div>
+      </div>
+    </div>
+    <div class="hero-companies">
+      <p class="companies-label">Experience at</p>
+      <div class="company-list">
+        <span class="company-chip">WebMD</span>
+        <span class="company-chip">FIS</span>
+        <span class="company-chip">Dassault Systèmes</span>
+        <span class="company-chip">Ambuja Cements</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT -->
+<div id="project">
+<div class="project-inner">
+  <p class="section-eyebrow">Featured Project</p>
+  <h2 class="section-title">Revenue & AR Analytics Dashboard</h2>
+  <p class="section-lead">A Python-based analytics platform that automates IFRS 15 revenue recognition, AR aging monitoring, and MIS reporting — replacing manual Excel workflows with audit-ready pipelines.</p>
+
+  <div class="project-grid">
+    <div class="project-chart">
+      <p class="chart-title">Revenue by industry segment</p>
+      <div class="bar-group">
+        <div class="bar-label"><span>Fintech</span><span>38%</span></div>
+        <div class="bar-track"><div class="bar-fill blue" style="width:0" data-w="38%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>Healthcare</span><span>35.5%</span></div>
+        <div class="bar-track"><div class="bar-fill green" style="width:0" data-w="35.5%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>Software</span><span>26.5%</span></div>
+        <div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="26.5%"></div></div>
+      </div>
+      <br>
+      <p class="chart-title" style="margin-top:16px;">AR aging — overdue buckets</p>
+      <div class="bar-group">
+        <div class="bar-label"><span>1–30 days</span><span>$72,800</span></div>
+        <div class="bar-track"><div class="bar-fill blue" style="width:0" data-w="55.8%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>31–60 days</span><span>$57,600</span></div>
+        <div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="44.2%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>61–90 days</span><span>$32,000</span></div>
+        <div class="bar-track"><div class="bar-fill red" style="width:0" data-w="24.5%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>90+ days</span><span>$42,500</span></div>
+        <div class="bar-track"><div class="bar-fill red" style="width:0" data-w="32.6%"></div></div>
+      </div>
+    </div>
+
+    <div class="project-chart" style="border-right:none;">
+      <p class="chart-title">Executive KPIs</p>
+      <div class="kpi-mini-grid">
+        <div class="kpi-mini">
+          <div class="kpi-mini-num">$1.14M</div>
+          <div class="kpi-mini-label">Total Invoiced</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kpi-mini-num g">$1.05M</div>
+          <div class="kpi-mini-label">Recognized Revenue</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kpi-mini-num a">$97.3K</div>
+          <div class="kpi-mini-label">Deferred Revenue</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kpi-mini-num r">$130.4K</div>
+          <div class="kpi-mini-label">Overdue AR</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kpi-mini-num g">88.6%</div>
+          <div class="kpi-mini-label">Collection Rate</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kpi-mini-num">27 days</div>
+          <div class="kpi-mini-label">Avg DSO</div>
+        </div>
+      </div>
+      <br>
+      <p class="chart-title" style="margin-top:8px;">Recognition standard split</p>
+      <div class="bar-group">
+        <div class="bar-label"><span>US GAAP — Recognized</span><span>$701K</span></div>
+        <div class="bar-track"><div class="bar-fill blue" style="width:0" data-w="90%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>IFRS 15 — Recognized</span><span>$350K</span></div>
+        <div class="bar-track"><div class="bar-fill green" style="width:0" data-w="45%"></div></div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-label"><span>IFRS 15 — Deferred</span><span>$97K</span></div>
+        <div class="bar-track"><div class="bar-fill gold" style="width:0" data-w="12.5%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-features">
+    <div class="feature-item">
+      <div class="feature-icon blue">📊</div>
+      <div class="feature-name">6 Auto-generated dashboards</div>
+      <div class="feature-desc">KPI summary, monthly trend, industry breakdown, AR aging, recognition split, contract performance.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon green">✅</div>
+      <div class="feature-name">SOX-compliant workflow</div>
+      <div class="feature-desc">Three-way matching, audit-ready documentation, journal entry reconciliation, and segregation of duties.</div>
+    </div>
+    <div class="feature-item" style="border-right:none;">
+      <div class="feature-icon gold">⚙</div>
+      <div class="feature-name">Python automation pipeline</div>
+      <div class="feature-desc">Built with Pandas & Matplotlib. Replaces manual Excel work with reproducible, version-controlled analytics.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:36px; display:flex; gap:16px; flex-wrap:wrap;">
+    <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="btn-primary">→ View on GitHub</a>
+    <span style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Python</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Pandas</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Matplotlib</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">IFRS 15</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">ASC 606</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">SOX</span>
+    </span>
+  </div>
+</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-eyebrow">Technical Arsenal</p>
+  <h2 class="section-title">Core Competencies</h2>
+  <p class="section-lead">A rare combination of finance domain expertise and technical execution capability — the profile that global finance teams increasingly demand.</p>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <span class="skill-cat-name">Revenue & Accounting</span>
+      <ul class="skill-list">
+        <li>Revenue Recognition (IFRS 15 / ASC 606)</li>
+        <li>General Ledger & Journal Entries</li>
+        <li>Deferred Revenue Management</li>
+        <li>Revenue Cycle Management</li>
+        <li>Financial Close & Accruals</li>
+        <li>Month-end / Quarter-end Close</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <span class="skill-cat-name">AR, AP & Compliance</span>
+      <ul class="skill-list">
+        <li>Accounts Receivable & AR Aging</li>
+        <li>Accounts Payable & P2P</li>
+        <li>Three-Way Matching</li>
+        <li>SOX Internal Controls</li>
+        <li>Audit Support & Documentation</li>
+        <li>DSO & Cash Flow Analysis</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <span class="skill-cat-name">Systems & Tools</span>
+      <ul class="skill-list">
+        <li>SAP FICO · SAP Ariba · Coupa</li>
+        <li>Oracle PeopleSoft</li>
+        <li>Salesforce CRM · MS Dynamics GP</li>
+        <li>Power BI · Advanced Excel (VBA)</li>
+        <li>Python · Pandas · Matplotlib</li>
+        <li>ServiceNow · Planview</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<div class="full-divider"></div>
+<section id="experience" style="max-width: 860px;">
+  <p class="section-eyebrow">Career Timeline</p>
+  <h2 class="section-title">Professional Experience</h2>
+  <p class="section-lead">Progressive roles across global organisations, consistently delivering measurable impact at scale.</p>
+
+  <div class="timeline">
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Revenue Analyst</div>
+        <span class="exp-period">Jul 2024 — Present</span>
+      </div>
+      <div class="exp-company">WebMD — Global Digital Health Platform · Mumbai, India</div>
+      <ul class="exp-points">
+        <li>Own end-to-end US GAAP & SOX-compliant revenue recognition across all public segments for a 175M+ user platform; enforce ASC 606 standards across multiple revenue streams.</li>
+        <li>Deliver week-over-week variance analysis and executive dashboards to C-suite; identify revenue leakage risks and surface actionable insights.</li>
+        <li>Drive month/quarter-end close cycles — author accruals, journal entries, reconciliation reports; maintain SOX-compliant audit binders.</li>
+      </ul>
+      <div class="exp-highlight">
+        <span class="exp-tag">ASC 606</span><span class="exp-tag">SOX</span><span class="exp-tag">Salesforce</span><span class="exp-tag">MS Dynamics GP</span><span class="exp-tag">Variance Analysis</span>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Accounts Payable Associate</div>
+        <span class="exp-period">Jan 2024 — Apr 2024</span>
+      </div>
+      <div class="exp-company">Data Axle — B2B Data & Marketing Intelligence · Pune, India</div>
+      <ul class="exp-points">
+        <li>Processed high-volume vendor invoices in NextMark — GL coding, three-way matching, payment execution; boosted data integrity by 20%.</li>
+        <li>Resolved vendor payment discrepancies; improved payment accuracy 15% and reduced overdue accounts by 25%.</li>
+        <li>Contributed to a 10% increase in collections through billing & cash flow analysis; distributed weekly cash requirement reports.</li>
+      </ul>
+      <div class="exp-highlight">
+        <span class="exp-tag">Three-Way Matching</span><span class="exp-tag">P2P</span><span class="exp-tag">NextMark</span><span class="exp-tag">Advanced Excel</span>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Billing Analyst</div>
+        <span class="exp-period">Nov 2022 — Dec 2023</span>
+      </div>
+      <div class="exp-company">FIS — Global Financial Technology · Pune, India</div>
+      <ul class="exp-points">
+        <li>Generated 500+ client invoices/month in SAP, exceeding productivity benchmarks by 65% with 98%+ on-time accuracy.</li>
+        <li>Reduced billing errors by 15% and improved client satisfaction by 12% through data validation and trend analysis.</li>
+        <li>Managed customer contracts including pricing adjustments, CPI updates, and service terminations; supported UAT for SAP billing module upgrades.</li>
+      </ul>
+      <div class="exp-highlight">
+        <span class="exp-tag">SAP FICO</span><span class="exp-tag">Planview</span><span class="exp-tag">ServiceNow</span><span class="exp-tag">Credit Memos</span>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Billing Analyst</div>
+        <span class="exp-period">Jul 2021 — Aug 2022</span>
+      </div>
+      <div class="exp-company">Dassault Systèmes — Enterprise SaaS & 3D Software · Pune, India</div>
+      <ul class="exp-points">
+        <li>Generated 300+ daily invoices in Oracle PeopleSoft, exceeding TAT targets by 200%; managed SAP Ariba & Coupa portal billing.</li>
+        <li>Performed monthly AR/GL reconciliations, deferred account reviews, and IFRS 15-compliant revenue forecasting via Excel Macros.</li>
+        <li>Resolved billing discrepancies and PO issues; collaborated with IT on billing system enhancements to reduce manual intervention.</li>
+      </ul>
+      <div class="exp-highlight">
+        <span class="exp-tag">Oracle PeopleSoft</span><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">IFRS 15</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GLOBAL STRATEGY -->
+<div class="full-divider"></div>
+<section>
+  <p class="section-eyebrow">Why Global?</p>
+  <h2 class="section-title">Target Markets &<br>Value Proposition</h2>
+  <p class="section-lead">How a Revenue Analyst with IFRS 15 + Python skills fits into high-demand global markets.</p>
+
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <div class="strategy-num">01</div>
+      <div class="strategy-title">UAE / Middle East</div>
+      <div class="strategy-body">Massive demand for <strong>IFRS-trained analysts</strong> in fintech, healthcare, and real estate sectors. Companies prefer candidates who can implement recognition standards from scratch — exactly your skillset.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">02</div>
+      <div class="strategy-title">UK / Europe</div>
+      <div class="strategy-body">IFRS 15 is the <strong>statutory standard</strong>. Your SAP FICO + IFRS experience maps perfectly to Revenue Controllers and Senior Billing Analyst roles at enterprise firms.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">03</div>
+      <div class="strategy-title">USA / Canada</div>
+      <div class="strategy-body">WebMD = US GAAP + ASC 606 + SOX. This is exactly the <strong>enterprise SaaS revenue recognition</strong> combination that tech companies in North America pay a premium for.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num">04</div>
+      <div class="strategy-title">Singapore / APAC</div>
+      <div class="strategy-body">Regional HQs for multinationals require analysts who understand both <strong>IFRS and US GAAP</strong>. Your dual-standard experience is rare and highly valued in this market.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact">
+<div class="contact-inner">
+  <div class="contact-text">
+    <p class="section-eyebrow">Let's Connect</p>
+    <h2 class="contact-title">Open to Global<br>Opportunities</h2>
+    <p class="contact-sub">Revenue Analyst · IFRS 15 · US GAAP · SOX<br>Pune, India · Relocating Internationally</p>
+  </div>
+  <div class="contact-links">
+    <a href="/cdn-cgi/l/email-protection#542721273c353a3f7a35332635233538626d143339353d387a373b39" class="contact-link">
+      <div class="contact-link-icon">✉</div>
+      <div class="contact-link-text">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value"><span class="__cf_email__" data-cfemail="3a494f49525b5451145b5d485b4d5b560c037a5d575b535614595557">[email&#160;protected]</span></span>
+      </div>
+    </a>
+    <a href="https://linkedin.com/in/sushankagrawal" target="_blank" class="contact-link">
+      <div class="contact-link-icon">in</div>
+      <div class="contact-link-text">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/sushankagrawal</span>
+      </div>
+    </a>
+    <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="contact-link">
+      <div class="contact-link-icon">⌥</div>
+      <div class="contact-link-text">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">github.com/sushank-revenue-analyst</span>
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+
+<footer>
+  <p>© 2025 Sushank Agrawal · Revenue & Financial Analyst</p>
+  <p>Pune, India · Open to Global Relocation</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const bars = document.querySelectorAll('.bar-fill[data-w]');
+  const
