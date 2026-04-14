@@ -1,0 +1,3 @@
+plugins: []
+kramdown:
+  parse_block_html: true
