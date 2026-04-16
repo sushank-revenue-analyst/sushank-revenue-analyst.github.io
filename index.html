@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sushank Agrawal - Revenue & Financial Analyst specializing in IFRS 15, US GAAP, SAP, and Python analytics. Open to global relocation.">
+<meta name="keywords" content="Revenue Analyst, Financial Analyst, IFRS 15, ASC 606, US GAAP, SOX, SAP FICO, Python Analytics, FP&A">
 <title>Sushank Agrawal — Revenue & Financial Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -29,7 +31,8 @@
     --radius-lg: 8px;
   }
 
-  html { scroll-behavior: smooth; }
+  /* Added scroll-padding-top to fix sticky nav overlap */
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
   body {
     font-family: var(--font-body);
@@ -119,15 +122,15 @@
     font-style: italic;
   }
   .hero-subtitle {
-    color: rgba(255,255,255,0.7);
-    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.6;
-    margin-bottom: 40px;
-    max-width: 380px;
+    margin-bottom: 24px;
+    max-width: 420px;
   }
   .hero-badges {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 44px;
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px;
   }
   .badge {
     background: rgba(255,255,255,0.1);
@@ -183,9 +186,9 @@
   .kpi-cell {
     background: var(--surface);
     padding: 28px 24px;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s;
   }
-  .kpi-cell:hover { background: #f8f7f5; }
+  .kpi-cell:hover { background: #f8f7f5; transform: scale(1.02); z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
   .kpi-num {
     font-family: var(--font-display);
     font-size: 36px;
@@ -258,7 +261,17 @@
   .project-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
   .project-inner .section-eyebrow { color: var(--gold-light); }
   .project-inner .section-title { color: #fff; }
-  .project-inner .section-lead { color: rgba(255,255,255,0.65); }
+  .project-inner .section-lead { color: rgba(255,255,255,0.65); margin-bottom: 32px;}
+  
+  .case-study-box {
+    background: rgba(255,255,255,0.04);
+    padding: 24px;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--gold);
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+  }
 
   .project-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
@@ -396,29 +409,16 @@
     border-radius: 50%;
     flex-shrink: 0;
   }
+  .skill-context {
+    display: block; font-size: 11px; color: var(--ink-faint); line-height: 1.4; padding-left: 12px; margin-top: -2px; margin-bottom: 6px;
+  }
 
   /* ── EXPERIENCE ── */
-  .timeline { position: relative; }
-  .timeline::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0;
-    width: 1px;
-    background: var(--border-strong);
-  }
   .exp-item {
     padding-left: 40px;
     padding-bottom: 48px;
     position: relative;
   }
-  .exp-item::before {
-    content: '';
-    position: absolute; left: -5px; top: 6px;
-    width: 11px; height: 11px;
-    border-radius: 50%;
-    background: var(--surface);
-    border: 2px solid var(--accent);
-  }
-  .exp-item:first-child::before { background: var(--accent); }
   .exp-header {
     display: flex; justify-content: space-between; align-items: flex-start;
     flex-wrap: wrap; gap: 8px;
@@ -428,23 +428,6 @@
     font-family: var(--font-display);
     font-size: 20px;
     color: var(--ink);
-  }
-  .exp-period {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    padding: 4px 10px;
-    border: 1px solid var(--border-strong);
-    border-radius: 2px;
-    white-space: nowrap;
-  }
-  .exp-company {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent-light);
-    margin-bottom: 14px;
   }
   .exp-points { list-style: none; }
   .exp-points li {
@@ -599,7 +582,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="nav-brand">Sushank Agrawal</span>
   <div class="nav-links">
@@ -611,31 +593,32 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="about" style="padding: 0; max-width: none; margin: 0;">
   <div class="hero-left">
-    <span class="hero-tag">Open to Global Opportunities</span>
+    <span class="hero-tag">Open to Global Opportunities & Visa Sponsorship</span>
     <h1 class="hero-name">
       Revenue &<br><em>Financial</em><br>Analyst
     </h1>
     <p class="hero-subtitle">
-      4+ years driving full-cycle revenue operations — IFRS 15, US GAAP, SOX — at global healthcare, fintech, and enterprise SaaS firms. I also build the tools that automate the work.
+      <strong>Who I am:</strong> Revenue Analyst specializing in IFRS 15 / ASC 606.<br>
+      <strong>What I solve:</strong> Revenue leakage, complex close optimizations, and SOX-compliant workflows.<br>
+      <strong>The Differentiator:</strong> Combining deep finance domain expertise with Python analytics to automate the work.
     </p>
-    <div class="hero-badges">
-      <span class="badge">IFRS 15</span>
-      <span class="badge">US GAAP · ASC 606</span>
-      <span class="badge">SOX Compliance</span>
-      <span class="badge">SAP FICO</span>
-      <span class="badge">Oracle PeopleSoft</span>
-      <span class="badge">Python Analytics</span>
-      <span class="badge">Power BI</span>
-      <span class="badge">MBA Finance</span>
-      <span class="badge">FMVA Certified</span>
+    
+    <div style="margin-bottom: 24px;">
+      <p style="font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">Targeting Roles</p>
+      <div class="hero-badges">
+        <span class="badge">Revenue Analyst</span>
+        <span class="badge">Revenue Accountant</span>
+        <span class="badge">FP&A Analyst</span>
+        <span class="badge">Order-to-Cash Analyst</span>
+      </div>
     </div>
+
     <div class="hero-cta">
-      <a href="#s-contact" class="btn-primary">✉ Get in Touch</a>
+      <a href="Sushank_Agrawal_CV.pdf" target="_blank" class="btn-primary">📄 Download Resume</a>
+      <a href="#contact" class="btn-ghost">✉ Get in Touch</a>
       <a href="https://linkedin.com/in/sushankagrawal" target="_blank" class="btn-ghost">→ LinkedIn</a>
-      <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="btn-ghost">→ GitHub</a>
     </div>
   </div>
 
@@ -643,7 +626,7 @@
     <div class="kpi-grid">
       <div class="kpi-cell">
         <div class="kpi-num">$1.14M</div>
-        <div class="kpi-label">AR Tracked & Managed</div>
+        <div class="kpi-label">AR Tracked via Python</div>
       </div>
       <div class="kpi-cell">
         <div class="kpi-num green">88.6%</div>
@@ -651,7 +634,7 @@
       </div>
       <div class="kpi-cell">
         <div class="kpi-num gold">500+</div>
-        <div class="kpi-label">Invoices / Month at FIS</div>
+        <div class="kpi-label">Invoices/Month at FIS</div>
       </div>
       <div class="kpi-cell">
         <div class="kpi-num">27 days</div>
@@ -663,7 +646,7 @@
       </div>
       <div class="kpi-cell">
         <div class="kpi-num">4+ yrs</div>
-        <div class="kpi-label">Experience</div>
+        <div class="kpi-label">Full-Cycle Experience</div>
       </div>
     </div>
     <div class="hero-companies">
@@ -672,18 +655,23 @@
         <span class="company-chip">WebMD</span>
         <span class="company-chip">FIS</span>
         <span class="company-chip">Dassault Systèmes</span>
-        <span class="company-chip">Ambuja Cements</span>
+        <span class="company-chip">Data Axle</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED PROJECT -->
 <div id="project">
 <div class="project-inner">
-  <p class="section-eyebrow">Featured Project</p>
+  <p class="section-eyebrow">Featured Case Study</p>
   <h2 class="section-title">Revenue & AR Analytics Dashboard</h2>
-  <p class="section-lead">A Python-based analytics platform that automates IFRS 15 revenue recognition, AR aging monitoring, and MIS reporting — replacing manual Excel workflows with audit-ready pipelines.</p>
+  <p class="section-lead">A Python-based analytics platform that replaces manual Excel workflows with audit-ready pipelines.</p>
+
+  <div class="case-study-box">
+    <p style="margin-bottom: 8px;"><strong>The Problem:</strong> Tracking aging AR and recognizing revenue manually via Excel was prone to human error, lacked strict auditability, and delayed executive decision-making.</p>
+    <p style="margin-bottom: 8px;"><strong>The Approach:</strong> Built a Python data pipeline utilizing Pandas and Matplotlib to ingest raw ERP data, systematically apply the 5-step IFRS 15 / ASC 606 model, and auto-generate clean visualizations.</p>
+    <p><strong>The Impact:</strong> Delivered 6 real-time, SOX-compliant dashboards tracking $1.14M in AR, optimizing visibility and empowering cross-functional teams with instant, accurate insights.</p>
+  </div>
 
   <div class="project-grid">
     <div class="project-chart">
@@ -765,76 +753,51 @@
     </div>
   </div>
 
-  <div class="project-features">
-    <div class="feature-item">
-      <div class="feature-icon blue">📊</div>
-      <div class="feature-name">6 Auto-generated dashboards</div>
-      <div class="feature-desc">KPI summary, monthly trend, industry breakdown, AR aging, recognition split, contract performance.</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon green">✅</div>
-      <div class="feature-name">SOX-compliant workflow</div>
-      <div class="feature-desc">Three-way matching, audit-ready documentation, journal entry reconciliation, and segregation of duties.</div>
-    </div>
-    <div class="feature-item" style="border-right:none;">
-      <div class="feature-icon gold">⚙</div>
-      <div class="feature-name">Python automation pipeline</div>
-      <div class="feature-desc">Built with Pandas & Matplotlib. Replaces manual Excel work with reproducible, version-controlled analytics.</div>
-    </div>
-  </div>
-
   <div style="margin-top:36px; display:flex; gap:16px; flex-wrap:wrap;">
-    <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="btn-primary">→ View on GitHub</a>
+    <a href="https://github.com/sushank-revenue-analyst/revenue-analytics-dashboard" target="_blank" class="btn-primary">→ View Project on GitHub</a>
     <span style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Python</span>
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Pandas</span>
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Matplotlib</span>
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">IFRS 15</span>
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">ASC 606</span>
-      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">SOX</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">Python & Pandas</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">IFRS 15 / ASC 606</span>
+      <span style="background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:2px; border:1px solid rgba(255,255,255,0.12);">SOX Automation</span>
     </span>
   </div>
 </div>
 </div>
 
-<!-- SKILLS -->
 <section id="skills">
   <p class="section-eyebrow">Technical Arsenal</p>
   <h2 class="section-title">Core Competencies</h2>
-  <p class="section-lead">A rare combination of finance domain expertise and technical execution capability — the profile that global finance teams increasingly demand.</p>
+  <p class="section-lead">A rare combination of finance domain expertise and technical execution capability — ensuring tools are used in proper business contexts.</p>
 
   <div class="skills-grid">
     <div class="skill-category">
       <span class="skill-cat-name">Revenue & Accounting</span>
       <ul class="skill-list">
         <li>Revenue Recognition (IFRS 15 / ASC 606)</li>
+        <span class="skill-context">Applied across subscription and licensing models.</span>
         <li>General Ledger & Journal Entries</li>
-        <li>Deferred Revenue Management</li>
-        <li>Revenue Cycle Management</li>
         <li>Financial Close & Accruals</li>
-        <li>Month-end / Quarter-end Close</li>
+        <span class="skill-context">Driving month-end & quarter-end execution.</span>
       </ul>
     </div>
     <div class="skill-category">
       <span class="skill-cat-name">AR, AP & Compliance</span>
       <ul class="skill-list">
         <li>Accounts Receivable & AR Aging</li>
-        <li>Accounts Payable & P2P</li>
-        <li>Three-Way Matching</li>
+        <span class="skill-context">Systematic tracking to optimize DSO.</span>
+        <li>Three-Way Matching (P2P)</li>
         <li>SOX Internal Controls</li>
-        <li>Audit Support & Documentation</li>
-        <li>DSO & Cash Flow Analysis</li>
+        <span class="skill-context">Maintaining strict audit-ready documentation.</span>
       </ul>
     </div>
     <div class="skill-category">
-      <span class="skill-cat-name">Systems & Tools</span>
+      <span class="skill-cat-name">Systems & Tools in Action</span>
       <ul class="skill-list">
-        <li>SAP FICO · SAP Ariba · Coupa</li>
-        <li>Oracle PeopleSoft</li>
-        <li>Salesforce CRM · MS Dynamics GP</li>
-        <li>Power BI · Advanced Excel (VBA)</li>
-        <li>Python · Pandas · Matplotlib</li>
-        <li>ServiceNow · Planview</li>
+        <li>SAP FICO & Oracle PeopleSoft</li>
+        <span class="skill-context">For high-volume contract billing & rev-rec.</span>
+        <li>Python, Pandas & Power BI</li>
+        <span class="skill-context">Automating AR pipelines and executive dashboards.</span>
+        <li>Salesforce CRM</li>
       </ul>
     </div>
   </div>
@@ -842,118 +805,62 @@
 
 
 
-<!-- CERTIFICATIONS & EDUCATION -->
 <div class="full-divider"></div>
 <section>
   <p class="section-eyebrow">Credentials</p>
   <h2 class="section-title">Education &<br>Certifications</h2>
-  <p class="section-lead">Academically grounded in Finance with industry-recognised certifications across financial modelling, securities markets, and ERP systems.</p>
 
   <div class="strategy-grid">
     <div class="strategy-card">
       <div class="strategy-num" style="font-size:32px; color: var(--gold); opacity:1;">MBA</div>
       <div class="strategy-title">MBA — Finance</div>
-      <div class="strategy-body">Savitribai Phule Pune University, Pune<br><strong>First Class with Distinction — 81%</strong><br>Sep 2019 – Sep 2021</div>
-    </div>
-    <div class="strategy-card">
-      <div class="strategy-num" style="font-size:32px; color: var(--gold); opacity:1;">B.Com</div>
-      <div class="strategy-title">B.Com — Accounting & Finance</div>
-      <div class="strategy-body">MATS University, Raipur<br><strong>May 2012 – May 2015</strong><br>Specialisation in Accounting & Financial Management</div>
+      <div class="strategy-body">Savitribai Phule Pune University, Pune<br><strong>First Class with Distinction — 81%</strong></div>
     </div>
     <div class="strategy-card">
       <div class="strategy-num" style="font-size:32px; color: var(--accent); opacity:1;">FMVA</div>
       <div class="strategy-title">Financial Modelling & Valuation Analyst</div>
-      <div class="strategy-body">Corporate Finance Institute (CFI)<br><strong>Industry-recognised global certification</strong> in financial modelling, valuation, and FP&A best practices.</div>
-    </div>
-    <div class="strategy-card">
-      <div class="strategy-num" style="font-size:32px; color: var(--accent); opacity:1;">PGDCA</div>
-      <div class="strategy-title">PGDCA — Computer Science</div>
-      <div class="strategy-body">MATS University, Raipur<br><strong>May 2016 – May 2017</strong><br>Post Graduate Diploma in Computer Applications</div>
+      <div class="strategy-body">Corporate Finance Institute (CFI)<br>Global certification in FP&A best practices.</div>
     </div>
     <div class="strategy-card">
       <div class="strategy-num" style="font-size:32px; color: var(--accent); opacity:1;">SAP</div>
-      <div class="strategy-title">SAP ERP Certified + NISM Certified</div>
-      <div class="strategy-body">SAP ERP Online Training — Financial Modules<br><strong>NISM Equity Derivatives (Series VIII)</strong><br>NISM Mutual Fund Distributor</div>
+      <div class="strategy-title">SAP ERP Certified + NISM</div>
+      <div class="strategy-body">SAP ERP Online Training — Financial Modules<br><strong>NISM Equity Derivatives (Series VIII)</strong></div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-num" style="font-size:32px; color: var(--gold); opacity:1;">B.Com</div>
+      <div class="strategy-title">B.Com — Accounting & Finance</div>
+      <div class="strategy-body">MATS University, Raipur<br>Specialisation in Financial Management</div>
     </div>
   </div>
 </section>
 
-<!-- ROLES & ACHIEVEMENTS -->
 <div class="full-divider"></div>
 <section id="achievements" style="max-width: 1100px;">
   <p class="section-eyebrow">In Depth</p>
-  <h2 class="section-title">Roles, Responsibilities &<br>Key Achievements</h2>
-  <p class="section-lead">A detailed breakdown of the impact delivered across every role — with real numbers and measurable outcomes.</p>
+  <h2 class="section-title">Roles & Impact</h2>
+  <p class="section-lead">A scan-friendly breakdown of measurable outcomes delivered across global organizations.</p>
 
-  <!-- KEY ACHIEVEMENTS BANNER -->
-  <div style="background: var(--accent); padding: 40px; margin-bottom: 48px;">
-    <p style="font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-light); margin-bottom:20px;">Key Achievements Across All Roles</p>
-    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:2px; background:rgba(255,255,255,0.1);">
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#fff; line-height:1; margin-bottom:6px;">65%+</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Above billing benchmark at FIS — 500+ invoices/month with 98%+ accuracy</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#3dc98a; line-height:1; margin-bottom:6px;">200%+</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">TAT exceeded at Dassault — 300+ daily invoices in Oracle PeopleSoft</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#e8c84a; line-height:1; margin-bottom:6px;">$1.14M</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">AR tracked via self-built Python analytics platform with 88.6% collection rate</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#e05c5c; line-height:1; margin-bottom:6px;">25%</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Reduction in overdue accounts at Data Axle through proactive AR reviews</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#3dc98a; line-height:1; margin-bottom:6px;">15%</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Billing error reduction at FIS + 12% improvement in client satisfaction scores</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.06); padding:24px 20px;">
-        <div style="font-family:var(--font-display); font-size:32px; color:#e8c84a; line-height:1; margin-bottom:6px;">20%</div>
-        <div style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">ERP data integrity boost at Data Axle via systematic audits and GL reconciliation</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEBMD -->
   <div style="border:1px solid var(--border); margin-bottom:32px;">
     <div style="background:var(--surface); padding:28px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
       <div>
         <div style="font-family:var(--font-display); font-size:22px; color:var(--ink);">Revenue Analyst — WebMD</div>
-        <div style="font-size:12px; font-weight:600; color:var(--accent-light); margin-top:3px;">Global Digital Health Platform · 175M+ Users · Mumbai, India</div>
+        <div style="font-size:12px; font-weight:600; color:var(--accent-light); margin-top:3px;">Global Digital Health Platform (175M+ Users) · Mumbai, India</div>
       </div>
       <span style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); padding:4px 10px; border:1px solid var(--border-strong); border-radius:2px;">Jul 2024 — Present</span>
     </div>
-    <div style="padding:28px 32px; display:grid; grid-template-columns:1fr; gap:28px;">
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--gold); display:inline-block;">Roles & Responsibilities</p>
+    <div style="padding:28px 32px;">
         <ul class="exp-points">
-          <li>Own end-to-end US GAAP & SOX-compliant revenue recognition across all public revenue segments for a platform serving 175M+ users worldwide.</li>
-          <li>Validate business submissions and enforce ASC 606 standards across multiple revenue streams including subscription, advertising, and licensing models.</li>
-          <li>Deliver week-over-week revenue variance analysis and executive dashboards to C-suite and cross-functional leadership.</li>
-          <li>Drive month-end and quarter-end close cycles — author accruals, journal entries, and reconciliation reports.</li>
-          <li>Maintain SOX-compliant revenue support binders ensuring audit-ready documentation at all times.</li>
-          <li>Partner with billing, finance, and product teams using Salesforce CRM and Microsoft Dynamics GP to reconcile complex accounts.</li>
-          <li>Identify revenue leakage risks and surface actionable insights informing strategic planning decisions.</li>
-        </ul>
-      </div>
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
-        <ul class="exp-points">
-          <li>Successfully managed revenue recognition across multiple complex revenue streams for one of the world's largest digital health platforms.</li>
-          <li>Established SOX-compliant audit documentation processes improving audit readiness and reducing review time.</li>
-          <li>Built cross-functional reporting pipelines via Salesforce and MS Dynamics GP improving financial transparency across teams.</li>
-          <li>Led initiatives improving reporting efficiency and reducing manual reconciliation effort across close cycles.</li>
+          <li>Own end-to-end US GAAP and SOX-compliant revenue recognition across public revenue segments, strictly enforcing ASC 606 standards.</li>
+          <li>Drive month-end/quarter-end close cycles, authoring accruals, journal entries, and reconciliation reports.</li>
+          <li>Deliver week-over-week revenue variance analysis and executive dashboards to C-suite leadership.</li>
+          <li>Established audit-ready SOX documentation workflows, reducing review time and improving compliance transparency.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
-          <span class="exp-tag">ASC 606</span><span class="exp-tag">US GAAP</span><span class="exp-tag">SOX</span><span class="exp-tag">Salesforce CRM</span><span class="exp-tag">MS Dynamics GP</span><span class="exp-tag">Variance Analysis</span><span class="exp-tag">Journal Entries</span>
+          <span class="exp-tag">ASC 606</span><span class="exp-tag">US GAAP</span><span class="exp-tag">SOX</span><span class="exp-tag">Salesforce</span><span class="exp-tag">MS Dynamics GP</span>
         </div>
-      </div>
     </div>
   </div>
 
-  <!-- DATA AXLE -->
   <div style="border:1px solid var(--border); margin-bottom:32px;">
     <div style="background:var(--surface); padding:28px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
       <div>
@@ -962,35 +869,19 @@
       </div>
       <span style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); padding:4px 10px; border:1px solid var(--border-strong); border-radius:2px;">Jan 2024 — Apr 2024</span>
     </div>
-    <div style="padding:28px 32px; display:grid; grid-template-columns:1fr; gap:28px;">
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--gold); display:inline-block;">Roles & Responsibilities</p>
+    <div style="padding:28px 32px;">
         <ul class="exp-points">
-          <li>Managed full-cycle accounts payable operations — processing high-volume vendor invoices and employee expense reports end-to-end in NextMark ERP with GL coding, three-way matching (PO, invoice, receipt), and payment execution via ACH, electronic transfers, and checks.</li>
-          <li>Reconciled vendor statements, verified invoice coding, and ensured strict compliance with internal financial controls and AP policies.</li>
-          <li>Performed systematic ERP audits to validate invoice data, eliminate duplicates, and improve reporting accuracy across AP workflows.</li>
-          <li>Acted as primary liaison with vendors to investigate and resolve payment discrepancies, billing disputes, and overdue account inquiries.</li>
-          <li>Conducted detailed billing and cash flow analysis to optimise cash receipts, forecast payment timing, and identify early warning billing trends.</li>
-          <li>Maintained organised, audit-ready records of all invoices, payments, and vendor data; distributed weekly cash requirement and ad-hoc financial reports using Advanced Excel (VBA/Macros).</li>
-          <li>Supported month-end close activities including account reconciliation, GL maintenance, accruals, and 1099 reporting; collaborated cross-functionally with Credit, Collections, and Billing teams.</li>
-        </ul>
-      </div>
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
-        <ul class="exp-points">
-          <li>Improved payment accuracy by 15% through proactive account reviews and systematic discrepancy resolution.</li>
-          <li>Reduced overdue accounts by 25% through disciplined follow-up and early escalation protocols.</li>
-          <li>Contributed to a 10% increase in collections through targeted cash flow analysis and billing trend identification.</li>
-          <li>Boosted ERP data integrity and reporting efficiency by 20% via structured audit processes.</li>
+          <li>Managed full-cycle accounts payable operations via NextMark ERP, executing accurate three-way matching and GL coding.</li>
+          <li>Reduced overdue accounts by 25% and improved payment accuracy by 15% through proactive account reviews.</li>
+          <li>Boosted ERP data integrity and reporting efficiency by 20% by performing systematic audit validations.</li>
+          <li>Contributed to a 10% increase in collections via targeted cash flow analysis and VBA/Macro reporting.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
-          <span class="exp-tag">Three-Way Matching</span><span class="exp-tag">P2P</span><span class="exp-tag">NextMark ERP</span><span class="exp-tag">GL Coding</span><span class="exp-tag">Advanced Excel</span><span class="exp-tag">VBA/Macros</span><span class="exp-tag">1099 Reporting</span>
+          <span class="exp-tag">Three-Way Matching</span><span class="exp-tag">P2P</span><span class="exp-tag">NextMark ERP</span><span class="exp-tag">VBA/Macros</span>
         </div>
-      </div>
     </div>
   </div>
 
-  <!-- FIS -->
   <div style="border:1px solid var(--border); margin-bottom:32px;">
     <div style="background:var(--surface); padding:28px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
       <div>
@@ -999,35 +890,19 @@
       </div>
       <span style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); padding:4px 10px; border:1px solid var(--border-strong); border-radius:2px;">Nov 2022 — Dec 2023</span>
     </div>
-    <div style="padding:28px 32px; display:grid; grid-template-columns:1fr; gap:28px;">
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--gold); display:inline-block;">Roles & Responsibilities</p>
+    <div style="padding:28px 32px;">
         <ul class="exp-points">
-          <li>Reviewed and entered 500+ customer contracts per month into SAP billing systems, ensuring accurate monthly recurring billing (MRB) and on-time invoice generation across monthly, quarterly, and annual billing cycles.</li>
-          <li>Managed end-to-end customer contract lifecycle — pricing adjustments, CPI updates, service modifications, renewals, and terminations — in strict compliance with SOW and SLA terms.</li>
-          <li>Performed rigorous data quality analysis, billing audits, and validation of billing procedures on historical data to eliminate discrepancies before client submission.</li>
-          <li>Monitored accounts receivable, generated analytical reports on revenue variances, and reconciled invoices with balance sheet reports to ensure financial accuracy.</li>
-          <li>Managed credit adjustments and credit memo processing via Planview and ServiceNow; collaborated with customer service and sales teams to resolve billing disputes and client inquiries with speed and accuracy.</li>
-          <li>Partnered with sales, project managers, and implementation teams for seamless client onboarding, contract renewals, and system change management.</li>
-          <li>Provided UAT support during SAP billing module upgrades; ensured full IFRS 15 and SOX compliance across all billing operations and client-facing financial documents.</li>
-        </ul>
-      </div>
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
-        <ul class="exp-points">
-          <li>Exceeded billing productivity benchmarks by 65%+ — consistently generating 500+ invoices/month with 98%+ on-time accuracy.</li>
-          <li>Reduced billing errors by 15% through rigorous data validation and trend analysis on historical billing data.</li>
-          <li>Improved client satisfaction scores by 12% through faster dispute resolution and proactive communication.</li>
-          <li>Successfully supported SAP billing module UAT ensuring zero disruption during critical system upgrade periods.</li>
+          <li>Exceeded billing productivity benchmarks by 65%+, generating 500+ invoices/month in SAP with 98%+ on-time accuracy.</li>
+          <li>Reduced overall billing errors by 15% and improved client satisfaction by 12% through rigorous data validation.</li>
+          <li>Managed end-to-end contract lifecycles (pricing adjustments, CPI updates) in strict SOW/SLA compliance.</li>
+          <li>Provided UAT support during critical SAP billing module upgrades ensuring zero disruption.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
-          <span class="exp-tag">SAP FICO</span><span class="exp-tag">Planview</span><span class="exp-tag">ServiceNow</span><span class="exp-tag">Credit Memos</span><span class="exp-tag">SOW Billing</span><span class="exp-tag">CPI Updates</span><span class="exp-tag">UAT Support</span>
+          <span class="exp-tag">SAP FICO</span><span class="exp-tag">Planview</span><span class="exp-tag">ServiceNow</span><span class="exp-tag">SOW Billing</span>
         </div>
-      </div>
     </div>
   </div>
 
-  <!-- DASSAULT -->
   <div style="border:1px solid var(--border); margin-bottom:32px;">
     <div style="background:var(--surface); padding:28px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
       <div>
@@ -1036,77 +911,36 @@
       </div>
       <span style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); padding:4px 10px; border:1px solid var(--border-strong); border-radius:2px;">Jul 2021 — Aug 2022</span>
     </div>
-    <div style="padding:28px 32px; display:grid; grid-template-columns:1fr; gap:28px;">
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--gold); display:inline-block;">Roles & Responsibilities</p>
+    <div style="padding:28px 32px;">
         <ul class="exp-points">
-          <li>Generated and dispatched 300+ daily customer invoices (manual and automatic) in Oracle PeopleSoft — including intercompany invoices — with precise tax, account, and amount data entry across multiple legal entities.</li>
-          <li>Managed end-to-end billing operations on SAP Ariba and Coupa portals; reviewed revenue accounts and applied IFRS 15 Accounting Standards to ensure compliant revenue recognition.</li>
-          <li>Reviewed bank statements daily and applied cash to relevant invoices, reducing AR backlog and maintaining healthy Days Sales Outstanding (DSO).</li>
-          <li>Performed month-end closing activities — reconciled AR/GL and deferred accounts, prepared management dashboards, and conducted unbilled revenue analysis using Excel Macros.</li>
-          <li>Resolved customer queries regarding payments and invoice discrepancies; interacted with external auditors and provided supporting documentation during audit reviews.</li>
-          <li>Investigated and resolved billing discrepancies, PO mismatches, and payment disputes with internal finance teams and external stakeholders.</li>
-          <li>Collaborated with IT teams on billing system enhancements to streamline workflows, eliminate manual intervention, and improve overall billing accuracy.</li>
-        </ul>
-      </div>
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
-        <ul class="exp-points">
-          <li>Exceeded TAT targets by 200% — processing 300+ daily invoices in Oracle PeopleSoft with consistently high accuracy.</li>
-          <li>Ensured IFRS 15-compliant AR/GL reconciliations with zero audit findings across all reviewed periods.</li>
-          <li>Streamlined Ariba and Coupa portal billing processes reducing manual errors and improving submission turnaround time.</li>
-          <li>Collaborated with IT to implement billing system enhancements that measurably reduced manual workload for the team.</li>
+          <li>Exceeded TAT targets by 200% by processing 300+ daily invoices in Oracle PeopleSoft across multiple legal entities.</li>
+          <li>Ensured complete IFRS 15 compliance during monthly AR/GL reconciliations and deferred account reviews.</li>
+          <li>Managed end-to-end portal billing operations on SAP Ariba and Coupa.</li>
+          <li>Collaborated with IT to implement billing system enhancements, significantly reducing manual workflows.</li>
         </ul>
         <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
-          <span class="exp-tag">Oracle PeopleSoft</span><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">IFRS 15</span><span class="exp-tag">AR/GL Reconciliation</span><span class="exp-tag">Intercompany Billing</span><span class="exp-tag">Excel Macros</span>
+          <span class="exp-tag">Oracle PeopleSoft</span><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">IFRS 15</span>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- AMBUJA -->
-  <div style="border:1px solid var(--border);">
-    <div style="background:var(--surface); padding:28px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-      <div>
-        <div style="font-family:var(--font-display); font-size:22px; color:var(--ink);">Finance Intern — Ambuja Cements Ltd.</div>
-        <div style="font-size:12px; font-weight:600; color:var(--accent-light); margin-top:3px;">A LafargeHolcim Group Company · Bhatapara, India</div>
-      </div>
-      <span style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); padding:4px 10px; border:1px solid var(--border-strong); border-radius:2px;">May 2020 — Jul 2020</span>
-    </div>
-    <div style="padding:28px 32px; display:grid; grid-template-columns:1fr; gap:28px;">
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--gold); display:inline-block;">Roles & Responsibilities</p>
-        <ul class="exp-points">
-          <li>Conducted comparative financial statement analysis across multi-year income statements and balance sheets.</li>
-          <li>Applied Excel-based financial modelling to evaluate liquidity, solvency, and profitability ratios.</li>
-          <li>Benchmarked financial performance against industry peers to surface operational improvement areas.</li>
-          <li>Identified performance trends, profitability drivers, and strategic opportunities from financial data.</li>
-        </ul>
-      </div>
-      <div>
-        <p style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--emerald); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--emerald); display:inline-block;">Key Achievements</p>
-        <ul class="exp-points">
-          <li>Improved forecast accuracy by 15% through Excel-based financial modelling and ratio analysis.</li>
-          <li>Improved resource allocation efficiency by 10% by identifying cost optimisation opportunities through peer benchmarking.</li>
-        </ul>
-        <div style="margin-top:16px; display:flex; gap:6px; flex-wrap:wrap;">
-          <span class="exp-tag">Financial Modelling</span><span class="exp-tag">Ratio Analysis</span><span class="exp-tag">Budgeting</span><span class="exp-tag">Advanced Excel</span><span class="exp-tag">Peer Benchmarking</span>
-        </div>
-      </div>
     </div>
   </div>
 
 </section>
 
-<!-- CONTACT -->
 <div id="contact">
 <div class="contact-inner">
   <div class="contact-text">
     <p class="section-eyebrow">Let's Connect</p>
     <h2 class="contact-title">Open to Global<br>Opportunities</h2>
-    <p class="contact-sub">Revenue Analyst · IFRS 15 · US GAAP · SOX<br>Pune, India · Relocating Internationally</p>
+    <p class="contact-sub">Revenue Analyst · IFRS 15 · US GAAP · SOX<br>Pune, India · Open to Visa Sponsorship</p>
   </div>
   <div class="contact-links">
+    <a href="Sushank_Agrawal_CV.pdf" target="_blank" class="contact-link" style="background: var(--gold); border-color: var(--gold);">
+      <div class="contact-link-icon" style="background: rgba(0,0,0,0.15);">📄</div>
+      <div class="contact-link-text">
+        <span class="contact-link-label" style="color: rgba(255,255,255,0.8);">Document</span>
+        <span class="contact-link-value">Download Resume (PDF)</span>
+      </div>
+    </a>
     <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sushank.agrawal69@gmail.com" target="_blank" class="contact-link">
       <div class="contact-link-icon">✉</div>
       <div class="contact-link-text">
@@ -1127,13 +961,6 @@
         <span class="contact-link-value">linkedin.com/in/sushankagrawal</span>
       </div>
     </a>
-    <a href="https://github.com/sushank-revenue-analyst" target="_blank" class="contact-link">
-      <div class="contact-link-icon">⌥</div>
-      <div class="contact-link-text">
-        <span class="contact-link-label">GitHub</span>
-        <span class="contact-link-value">github.com/sushank-revenue-analyst</span>
-      </div>
-    </a>
   </div>
 </div>
 </div>
@@ -1143,4 +970,19 @@
   <p>Pune, India · Open to Global Relocation</p>
 </footer>
 
-<script data-cfasync="false" src="/c
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+  // Add width animation for bars when scrolled into view
+  const bars = document.querySelectorAll('.bar-fill');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const w = entry.target.getAttribute('data-w');
+        entry.target.style.width = w;
+      }
+    });
+  });
+  bars.forEach(bar => observer.observe(bar));
+</script>
+</body>
+</html>
